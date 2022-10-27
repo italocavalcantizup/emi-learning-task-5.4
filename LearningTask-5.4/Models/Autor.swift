@@ -13,15 +13,17 @@ struct Autor {
     private(set) var sobrenome: String
     private(set) var bio: String
     private(set) var tecnologias: String
-    private(set) var nomeCompleto: String
     
-    init(fotoURL: String, nome: String, sobrenome: String, bio: String, tecnologias: String, nomeCompleto: String) {
+    private var nomeCompleto: String {
+        return "\(nome) \(sobrenome)"
+    }
+    
+    init(fotoURL: String, nome: String, sobrenome: String, bio: String, tecnologias: String) {
         self.fotoURL = fotoURL
         self.nome = nome
         self.sobrenome = sobrenome
         self.bio = bio
         self.tecnologias = tecnologias
-        self.nomeCompleto = nomeCompleto
     }
 
 }
