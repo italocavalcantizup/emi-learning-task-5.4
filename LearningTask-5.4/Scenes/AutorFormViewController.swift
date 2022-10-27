@@ -65,14 +65,14 @@ class AutorFormViewController: UIViewController {
         guard let tecnologias = tecnologiasTextField.text, !tecnologias.isEmpty else {
             return (false, "Informe as tecnologias sobre as quais o autor escreve.")
         }
-        
         autor = Autor(
             fotoURL: foto,
             nome: nomeFormatado.0,
             sobrenome: nomeFormatado.1,
             bio: bio,
             tecnologias: tecnologias,
-            nomeCompleto: nomeAutor)
+            nomeCompleto: nomeAutor
+        )
         
         return (true, nil)
     }
